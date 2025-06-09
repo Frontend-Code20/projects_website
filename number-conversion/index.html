@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="Brx0hDwO_Pa50eWlICsxLheF90NjJu9hZ6Z2aX1gl8Q" />
+    <meta name="Keywords" content="Numbers System,numbers system">
+    <meta name="Keywords" content="Deciaml, Deciaml To Binary , Deciaml To Hexadecimal, Deciaml To Octal">
+    <meta name="Keywords" content="deciaml, deciaml To binary , deciaml To hexadecimal, deciaml to octal">
+    <meta name="Keywords" content="Binary, Binary To Deciaml , Binary To Hexadecimal, Binary To Octal">
+    <meta name="Keywords" content="binary, binary To deciaml , binary To hexadecimal, binary to octal">
+    <meta name="Keywords" content="Octal, Octal To Binary , Octal To Hexadecimal, Octal To Deciaml">
+    <meta name="Keywords" content="octal, octal To binary , octal To hexadecimal, octal to deciaml">
+    <meta name="Keywords" content="Hexadecimal, Hexadecimal To Binary , Hexadecimal To Deciaml, Hexadecimal To Octal">
+    <meta name="Keywords" content="hexadecimal, hexadecimal To binary , hexadecimal To deciaml, hexadecimal to octal">
+    <meta name="Keywords" content="numbers,Number,Number Conversion, Conversion Number , conversion,Convert,convert">
+    <meta name="Keywords" content="Binary Number, Deciaml Number,Octal Number,Hexadecimal Number">
+    <meta name="Keywords"
+        content="What is Deciaml Number,What is Binary Number,What is Hexadecimal Number,What is Hexadecimal Number">
+    <meta name="Keywords" content="NumMagic,nummagic,Number Magic">
+    <meta name="Keywords" content="Whole numbers, fractions, fraction number">
+    <meta name="Keywords" content="Website for Number conversion,Number Trends,digital numbers">
+    <meta name="Keywords" content="0 and 1,01,0,1,0's,1's,computer numbers">
+
+    <meta name="description"
+        content="A powerful number conversion tool that allows quick conversions between binary, decimal, octal, and hexadecimal, including their fraction values. Perform fast, offline conversions with ease.">
+    <meta name="author" content="Usama khan">
+
+    <title>NumMagic</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/header.css">
+    <link rel="stylesheet" href="/CSS/response.css">
+    <link rel="shortcut icon" type="x-icon" href="./images/logo.png">
+
+</head>
+
+<body>
+
+    <header class="header">
+        <img src="./images/open.png" alt="" class="menu-icon" id="menu-icon">
+        <div class="brand-box">
+            <img src="./images/logo.png" alt="" class="logo">
+            <h3 class="brand-name">NumMagic</h3>
+        </div>
+        <nav class="menu-wrapper" id="menu-wrapper">
+            <div class="Menuback" id="Menuback"></div>
+            <ul class="navmenu" id="navmenu" itemprop="menu">
+                <li itemprop="name"><a href="/" class="menu-item active" aria-label="Go to home page">Home</a></li>
+                <li itemprop="name"><a href="/" class="menu-item" aria-label="Go to blog page">Blog</a></li>
+                <li itemprop="name"><a href="/" class="menu-item" aria-label="Go to about page">About</a></li>
+                <li itemprop="name"><a href="/" class="menu-item" aria-label="Go to help page">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="main-section">
+        <div class="main-wrapper">
+            <h1 class="main-title" aria-label="Page title">Number Conversion</h1>
+            <p class="intro">Quickly convert numbers between decimal, binary, octal, and hexadecimal using a simple and
+                intuitive tool.</p>
+            <div class="dropdown-box">
+                <div class="subgroup">
+                    <p id="from">From </p>
+                    <select name="" id="select1" aria-label="Select the number system to convert from">
+                        <option value="Select" selected disabled>Select</option>
+                        <option value="Decimal">Decimal</option>
+                        <option value="Binary">Binary</option>
+                        <option value="Octal">Octal</option>
+                        <option value="Hexadecimal">Hexadecimal</option>
+                    </select>
+                    <p id="selectOneError" class="message">Please select a conversion</p>
+                </div>
+                <div class="subgroup">
+                    <p id="to">To </p>
+                    <select name="" id="select2" aria-label="Select the number system to convert to">
+                        <option value="Select" selected disabled>Select</option>
+                        <option value="Decimal">Decimal</option>
+                        <option value="Binary">Binary</option>
+                        <option value="Octal">Octal</option>
+                        <option value="Hexadecimal">Hexadecimal</option>
+                    </select>
+                    <p id="selectTwoError" class="message">Please Select, this is invalid</p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="group1" id="group2">
+                    <label for="" id="point" class="">Enter Number</label>
+                    <input type="text" class="input-box" id="number-input" placeholder="Start Conversion" aria-label="Input Field">
+                    <p class="message" id="inputError">Invalid Deciaml number</p>
+                </div>
+                <div class="group2">
+                    <button class="btn" id="convert" aria-label="Convert Button">Convert</button>
+                    <button class="btn" id="clear" aria-label="Clear Button">Clear</button>
+                </div>
+                <div class="group3">
+                    <p id="result_text">Result</p>
+                    <p class="result" id="answerBox" aria-label="Result"></p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>Copyright ©2023 All rights reserved!</p>
+    </footer>
+
+    <script type="module" src="/JS/script.js"></script>
+
+</body>
+
+</html>

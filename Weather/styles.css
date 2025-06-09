@@ -1,0 +1,169 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+.wrapper{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: #0077B6;
+    overflow: auto;
+}
+
+.container{
+    display: flex;
+    background-color: antiquewhite;
+    margin: auto;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1050px;
+}
+
+.weather-wrapper{
+    background-color: #00B4D8;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.title-box{
+    display: flex;
+    gap: 10px;
+}
+
+form label{
+    display: none;
+}
+
+form{
+    display: flex;
+    width: 100%;
+    max-width: 80%;
+    border: 2px solid #CAF0F8;
+    height: 45px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    padding: 0 10px 0 20px;
+    margin-top: 20px;
+}
+
+form input{
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+    color: #fff;
+}
+
+.search-icon{
+    cursor: pointer;
+    color: #0077B6;
+    width: 30px;
+}
+
+p{
+    color: #fff;
+}
+
+.location{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.city{
+    position: relative;
+}
+
+.city h2{
+    margin: 0px;
+}
+
+.city span{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: #90E0EF;
+    bottom: -10px;
+    border-radius: 10px;
+    left: 0px;
+    overflow: hidden;
+}
+
+.city span::after{
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 20px;
+    background-color: #03045E;
+    bottom:0px;
+    border-radius: 10px;
+    left: -25px;
+    animation: effect 1.5s infinite linear;
+}
+
+@keyframes effect{
+    0%{
+        left: -25px;
+    }
+    100%{
+        left: 100%;
+    }
+}
+
+.weather-info{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.weather-info .info-card{
+    background-color: #90E0EF;
+    padding: 20px;
+    width: 100px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather-wrapper .weather-info h2{
+    font-size: 18px;
+}
+
+.weather-wrapper .weather-info h3{
+    color: #0077B6;
+    font-size: 14px;
+} 
+
+.box{
+    display: flex;
+    align-items: center;
+}
+
+.error{
+    margin: 10px 0 0 10px;
+    font-size: 14px;
+    color: #FF0000;
+    display: none;
+}
+
+.map{
+    display: flex;
+    height: 500px;
+    width: 100%;
+    max-width: 330px;
+}
+
+.temp-tooltip{
+    background-color: #00ff00;
+}

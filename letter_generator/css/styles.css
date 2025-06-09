@@ -1,0 +1,240 @@
+body{
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #09122C;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    overflow: auto;
+}
+
+.dashboard{
+    display: flex;
+    margin: auto 0;
+    flex-direction: column;
+    padding: 0 20px 30px 20px ;
+}
+
+h1{
+    color: #fff;
+    padding-left: 10px;
+    border-left: 4px solid #872341;
+    font-size: 45px;
+}
+
+h1 span{
+    color: #BE3144;
+}
+
+.cards-wrapper{
+    border-left: 4px solid #872341;
+    padding-left: 10px; 
+    margin-top: 30px;
+}
+
+.card-box{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card{
+    display: inline-block;
+    padding: 20px 30px;
+    width: 200px;
+    background: linear-gradient(90deg, #E17564, #BE3144 );
+    border-radius: 40px 10px;
+    cursor: pointer;
+}
+
+.card:hover{
+    background: linear-gradient(90deg, #BE3144, #E17564);
+}
+
+.form-tabs{
+    display: none;
+    position: relative;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.form-tabs .tabs{
+    display: flex;   
+    gap: 5px;
+    cursor: pointer;
+    border-bottom: 4px solid #872341;
+    padding-bottom: 5px;
+    margin-top: 40px;
+    position: relative;
+}
+
+.tabs .tab-item{
+    display: flex;
+    position: relative;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.tabs .tab-item:hover{
+    background-color: rgba(225, 117, 100, 0.3);
+}
+
+.form-tabs .tabs .tab-item::after{
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 30px;
+    height: 100%;
+    border: 4px solid #BE3144;
+    border-left: none;
+    box-sizing: border-box;
+    display: none;
+}
+
+.form-tabs .tabs .tab-item::before{
+    display: none;
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    left: 0px;
+    top: 0;
+    width: 30px;
+    height: 100%;
+    border: 4px solid #BE3144;
+    border-right: none;
+}
+
+
+.form-tabs .tabs .tab-item:hover::after, .form-tabs .tabs .tab-item:hover::before{
+    display: flex;
+}
+
+
+.form-tabs .tabs .active-tab{
+    background-color: rgba(225, 117, 100, 0.3);
+}
+
+.form-tabs .tabs .active-tab::after, .form-tabs .tabs  .active-tab::before{
+    display: flex;
+}
+
+.tab-content{
+    padding-top: 10px;
+    display: none;
+    width: 100%;
+}
+.active-content{
+    display: flex;
+}
+
+.back-icon{
+    position: absolute;
+    color: #fff;
+    top: 10px;
+    left: -50px;
+    background-color: #BE3144;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.tabs-wapper{
+    display: flex;
+    height: 90%;
+    box-sizing: border-box;
+}
+
+.modal{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;                    
+    background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    border-radius: 10px;
+    gap: 10px;
+    width: 100%;
+    height: 80%; 
+    max-width: 700px;
+    padding: 30px 20px;
+}
+
+#letter-preview{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-width: 480px; 
+}
+
+.btn-box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    max-width: 200px;
+}
+.modal-btn{
+    width: 100%;
+    height: 40px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 10px;
+    background-color: #BE3144;
+}
+
+.download-btn{
+    text-decoration: none;
+    text-align: center; 
+    background-color: #E17564;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 10px 0;
+}
+
+.close-icon{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: #872341;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 752px) {
+    .form-tabs{
+        padding-top: 50px;
+    }
+
+    .back-icon{
+        top: -50px;
+        left: -10px;
+    }
+
+    #letter-preview{
+        height: 80%;
+    }
+}

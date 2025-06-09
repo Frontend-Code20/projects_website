@@ -1,0 +1,302 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+     font-family: "Tagesschrift", system-ui;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: #3D348B;
+    justify-content: center;
+    overflow: auto;
+}
+
+.container {
+    margin: auto 0;
+    background-color: #7678ED;
+    padding: 20px;
+    border-radius: 20px;
+    border-top: 5px solid #F35B04;
+    display: flex;
+    width: 90%;
+    box-sizing: border-box;
+    flex-direction: column;
+    height: 90%;
+}
+
+.title {
+    text-align: center;
+    font-weight: 700;
+    color: #3D348B;
+}
+
+#play-box {
+    display: none;
+}
+
+.user-box {
+    display: flex;
+    gap: 20px;
+}
+
+.user-box .player {
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 18px;
+}
+
+
+.active-user {
+    border-left: 5px solid #3D348B;
+    background-color: #F35B04;
+}
+
+.deactive-user {
+    border-left: 5px solid #3D348B;
+    border-top: 2px solid #F35B04;
+    border-right: 2px solid #F35B04;
+    border-bottom: 2px solid #F35B04;
+}
+
+.game-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin: 40px 0;
+}
+
+
+.game-grid button {
+    height: 100px;
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+.game-grid .horizotal-line {
+    width: 100%;
+    height: 5px;
+    background-color: #3D348B;
+    position: absolute;
+}
+
+.firstX-line {
+    top: 100px;
+}
+
+.secondX-line {
+    top: 205px;
+}
+
+.vertical-line {
+    width: 5px;
+    height: 100%;
+    background-color: #3D348B;
+    position: absolute;
+    top: -2px;
+}
+
+.firstY-line {
+    left: 33%;
+}
+
+.secondY-line {
+    left: 66%;
+}
+
+button>img {
+    width: 80px;
+}
+
+.btn-box {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.start-btn {
+    align-self: center;
+    width: 50%;
+    padding: 20px 0;
+    font-size: 18px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: #3D348B;
+    opacity: 0.8;
+    color: #fff;
+    font-size: 1.43rem;
+}
+
+.start-btn:hover {
+    opacity: 1;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    width: 300px;
+    outline: none;
+    border: 2px solid #3D348B;
+    background-color: transparent;
+    border-radius: 10px;
+    font-size: 24px;
+    padding-left: 10px;
+    height: 40px;
+}
+
+.wining-line {
+    position: absolute;
+    background-color: #F35B04;
+    transition: all 2s;
+}
+
+.animateX {
+    animation: animateX 1s linear forwards;
+}
+
+.result-box {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    display: none;
+    transition: all 2s;
+}
+
+.result-box>.winner-box {
+    display: flex;
+    gap: 5px;
+}
+
+.result-box>.winner-box>img {
+    width: 70px;
+}
+
+.restart {
+    width: 40%;
+    padding: 10px 0;
+    font-size: 18px;
+    background-color: #3D348B;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    opacity: .8;
+}
+
+.restart:hover {
+    opacity: 1;
+}
+
+@keyframes animateX {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.animateY {
+    animation: animateY 1s ease-in forwards;
+}
+
+@keyframes animateY {
+    0% {
+        height: 0px;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
+
+.y {
+    top: 0px;
+    width: 5px;
+}
+
+.y1 {
+    left: 15%;
+}
+
+.y2 {
+    left: 50%;
+}
+
+.y3 {
+    left: 80%;
+}
+
+.x {
+    left: 0px;
+    height: 5px;
+}
+
+.x1 {
+    top: 15%;
+}
+
+.x2 {
+    top: 50%;
+}
+
+.x3 {
+    top: 80%;
+}
+
+.rotated{
+    top: 0px;
+    width: 5px;
+    background-color: #F35B04;
+    transform-origin: right;
+    top: 50%;
+    left: 50%;
+    height: 141%;
+    transition: none !important;
+}
+
+.-xy{
+    transform: translate(-50%, -50%) rotate(50deg);
+}
+
+.xy{
+    transform: translate(-50%, -50%) rotate(-50deg);
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+    .container {
+        width: 50%;
+    }
+}
+
+/* Laptops */
+@media (min-width: 992px) {
+    .container {
+        width: 40%;
+    }
+}
+
+/* desktop */
+@media (min-width: 1200px) {
+    .container {
+        width: 30%;
+    }
+}

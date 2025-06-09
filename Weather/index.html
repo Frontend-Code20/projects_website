@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather APP</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="container">
+            <div class="weather-wrapper">
+                <h1 class="title-box">
+                    <img src="icons/sun.png" alt="weather logo" width="40px" height="40px">
+                    <span>Weather</span>
+                </h1>
+                <p>Get to know about weather of the your region, city, country and All around the world.</p>
+                <form action="" id="searchFrom">
+                    <label for="search">Search Weather</label>
+                    <input type="search" name="search" id="search" placeholder="Search For Weather">
+                    <img src="icons/search.svg" alt="search" class="search-icon">
+                </form>
+                <div class="error" id="error">
+                    Please enter a valid city, state, or country to see results.
+                </div>
+                <div class="location">
+                    <div class="box">
+                        <div class="city">
+                            <h2 id="city">City</h2>
+                            <span></span>
+                        </div>
+                    </div>
+                    <h3 class="country" id="country">Country</h3>
+                </div>
+                <div class="weather-info">
+                    <div class="info-card">
+                        <h2 id="temp">27°C</h2>
+                        <h3>Temp:</h3>
+                    </div>
+                    <div class="info-card">
+                        <h2 id="feels">27°C</h2>
+                        <h3>Feels</h3>
+                    </div>
+                    <div class="info-card">
+                        <h2 id="winds">Wind</h2>
+                        <h3>Wind</h3>
+                    </div>
+                    <div class="info-card">
+                        <h2 id="humidity">humidity</h2>
+                        <h3>humidity</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="map" id="map"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script type="module" src="script.js"></script>
+
+</body>
+
+</html>

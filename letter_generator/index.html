@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter Generator</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/form.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="dashboard">
+            <h1>WELCOME TO <span>LETTER GENERATOR</span></h1>
+            <p>Type your thoughts, watch them transform, and take them home as a stylish PDF!</p>
+            <div class="cards-wrapper">
+                <h2>Pick A Letter Type</h2>
+                <div class="card-box">
+                    <div class="card letterType">
+                        <img src="assets/note.png" alt="" width="50px">
+                        <h3>Business Letter</h3>
+                    </div>
+                    <div class="card letterType">
+                        <img src="assets/document.png" alt="" width="50px">
+                        <h3>Personal Letter</h3>
+                    </div>
+                    <div class="card letterType">
+                        <img src="assets/cover-letter.png" alt="" width="50px">
+                        <h3>Application Letter</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-tabs">
+            <div class="tabs">
+                <div class="tab-item active-tab"><span>Business Letter</span></div>
+                <div class="tab-item"><span>Personal Letter</span></div>
+                <div class="tab-item"><span>Application Letter</span></div>
+                <span class="back-icon" id="backBtn"><i class="fas fa-arrow-left"></i></span>
+            </div>
+            <div class="tabs-wapper">
+                <div class="tab-content active-content">
+                    <form action="" id="business-form">
+
+                        <label for="senderName">
+                            <span>Sender's Name</span>
+                            <input type="text" name="senderName" id="senderName" required>
+                        </label>
+                        <label for="senderCompany">
+                            <span>Sender's Company Name</span>
+                            <input type="text" name="senderCompany" id="senderCompany" required>
+                        </label>
+                        <label for="senderAddress">
+                            <span>Sender’s Address</span>
+                            <input type="text" name="senderAddress" id="senderAddress" required>
+                        </label>
+
+                        <label for="recipientName">
+                            <span>Recipient's Name</span>
+                            <input type="text" name="recipientName" id="recipientName" required>
+                        </label>
+                        <label for="recipientCompany">
+                            <span>Recipient's Company Name</span>
+                            <input type="text" name="recipientCompany" id="recipientCompany" required>
+                        </label>
+                        <label for="recipientAddress">
+                            <span>Recipient’s Address</span>
+                            <input type="text" name="recipientAddress" id="recipientAddress" required>
+                        </label>
+
+                        <label for="subject">
+                            <span>Subject of the Letter</span>
+                            <input type="text" name="subject" id="subject" required>
+                        </label>
+
+                        <label for="salutation">
+                            <span>Greeting/Salutation</span>
+                            <input type="text" name="salutation" id="salutation" required>
+                        </label>
+
+                        <label for="body">
+                            <span>Body</span>
+                            <textarea rows="8" name="body" id="body" required></textarea>
+                        </label>
+
+                        <label for="closing">
+                            <span>Closing Statement</span>
+                            <select id="closing" name="closing">
+                                <option value="sincerely">Sincerely,</option>
+                                <option value="best_regards">Best regards,</option>
+                                <option value="yours_truly">Yours truly,</option>
+                                <option value="kind_regards">Kind regards,</option>
+                                <option value="respectfully">Respectfully,</option>
+                                <option value="warm_wishes">Warm wishes,</option>
+                                <option value="with_appreciation">With appreciation,</option>
+                                <option value="thank_you">Thank you,</option>
+                            </select>
+                        </label>
+
+                        <label for="signature">
+                            <span>Sender’s Signature</span>
+                            <input type="text" name="signature" id="signature" required>
+                        </label>
+
+                        <label for="date">
+                            <span>Date</span>
+                            <input type="date" name="date" id="date" required>
+                        </label>
+
+                        <button type="submit" class="btn" id="business-btn">Generate Business Letter</button>
+                    </form>
+                </div>
+                <div class="tab-content">
+                    <form action="" id="personal-form">
+                        <label for="senderName">
+                            <span>Sender's Name</span>
+                            <input type="text" name="senderName" id="senderName" required>
+                        </label>
+                        <label for="senderAddress">
+                            <span>Sender’s Address</span>
+                            <input type="text" name="senderAddress" id="senderAddress" required>
+                        </label>
+
+                        <label for="recipientName">
+                            <span>Recipient’s Name</span>
+                            <input type="text" name="recipientName" id="recipientName" required>
+                        </label>
+                        <label for="recipientAddress">
+                            <span>Recipient’s Address</span>
+                            <input type="text" name="recipientAddress" id="recipientAddress" required>
+                        </label>
+
+                        <label for="subject">
+                            <span>Subject of the Letter</span>
+                            <input type="text" name="subject" id="subject" required>
+                        </label>
+
+                        <label for="salutation">
+                            <span>Greeting/Salutation</span>
+                            <input type="text" name="salutation" id="salutation" required>
+                        </label>
+
+                        <label for="body">
+                            <span>Body</span>
+                            <textarea name="body" id="body" rows="8" required></textarea>
+                        </label>
+
+                        <label for="closing">
+                            <span>Closing Statement</span>
+                            <select id="closing" name="closing">
+                                <option value="sincerely">Sincerely,</option>
+                                <option value="best_regards">Best regards,</option>
+                                <option value="yours_truly">Yours truly,</option>
+                                <option value="kind_regards">Kind regards,</option>
+                                <option value="respectfully">Respectfully,</option>
+                                <option value="warm_wishes">Warm wishes,</option>
+                                <option value="with_appreciation">With appreciation,</option>
+                                <option value="thank_you">Thank you,</option>
+                            </select>
+                        </label>
+
+                        <label for="signature">
+                            <span>Sender’s Signature</span>
+                            <input type="text" name="signature" id="signature" required>
+                        </label>
+
+                        <label for="date">
+                            <span>Date</span>
+                            <input type="date" name="date" id="date" required>
+                        </label>
+
+                        <button type="submit" class="btn" id="personal-btn">Generate Personal Letter</button>
+                    </form>
+                </div>
+                <div class="tab-content">
+                    <form id="application-form">
+                        <label for="senderName">
+                            <span>Sender Name:</span>
+                            <input type="text" name="senderName" id="senderName" required />
+                        </label>
+
+                        <label for="recipientName">
+                            <span>Recipient Name (e.g. Hiring Manager):</span>
+                            <input type="text" name="recipientName" id="recipientName" />
+                        </label>
+
+                        <label for="companyName">
+                            <span>Company Name:</span>
+                            <input type="text" name="companyName" id="companyName" required />
+                        </label>
+
+                        <label for="jobTitle">
+                            <span>Position Title:</span>
+                            <input type="text" name="jobTitle" id="jobTitle" required />
+                        </label>
+
+                        <label for="date">
+                            <span>Date:</span>
+                            <input type="date" name="date" id="date" required />
+                        </label>
+
+                        <label for="body">
+                            <span>Body:</span>
+                            <textarea name="body" id="body" rows="8" required></textarea>
+                        </label>
+
+                        <label for="closing">
+                            <span>Closing (e.g. Sincerely):</span>
+                            <select name="closing" id="closing">
+                                <option>Sincerely</option>
+                                <option>Kind regards</option>
+                                <option>Yours faithfully</option>
+                                <option>Best regards</option>
+                            </select>
+                        </label>
+
+                        <label for="signatureName">
+                            <span>Signature Name:</span>
+                            <input type="text" name="signatureName" id="signatureName" required />
+                        </label>
+
+                        <button type="submit" class="btn">Generate Letter</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="left-effect"></div>
+        <div class="right-effect"></div>
+
+        <div class="modal" id="preview-modal">
+            <div class="modal-content">
+                <iframe src="" frameborder="0" id="letter-preview"></iframe>
+                <div class="btn-box">
+                    <a class="download-btn" id="download" href="" download>Download</a>
+                    <button class="modal-btn" id="homeBtn">Home</button>
+                </div>
+                <i class="fas fa-times close-icon" id="modal-close"></i>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/layout.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

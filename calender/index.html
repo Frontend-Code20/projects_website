@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calender</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h1>Calender / Event Schendler</h1>
+            <div class="calender-wrapper">
+                <div class="left-sidebar">
+                    <div class="box">
+                        <h2 id="month">Month</h2>
+                        <div>
+                            <button class="btn" id="pre-month"><img src="assets/arrow-left.png" width="20" height="20"
+                                    alt="previous"></button>
+                            <button class="btn" id="next-month"><img src="assets/arrow-right.png" width="20" height="20"
+                                    alt="next"></button>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <h2 id="year">Year</h2>
+                        <div>
+                            <button class="btn" id="pre-year"><img src="assets/arrow-left.png" width="20" height="20"
+                                    alt="previous"></button>
+                            <button class="btn" id="next-year"><img src="assets/arrow-right.png" width="20" height="20"
+                                    alt="next"></button>
+                        </div>
+                    </div>
+                    <p class="centered-muted">Today</p>
+                    <h2 id="day">day</h2>
+                    <h2 id="date">date</h2>
+                </div>
+                <div class="calender">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="cell">Sun</th>
+                                <th class="cell">Mon</th>
+                                <th class="cell">Tue</th>
+                                <th class="cell">Wed</th>
+                                <th class="cell">Thu</th>
+                                <th class="cell">Fri</th>
+                                <th class="cell">Sat</th>
+                            </tr>
+                        </thead>
+                        <tbody id="calender-body">
+                            <tr>
+                                <td class="cell">
+                                    <div class="cell-content"></div>
+                                </td>
+                                <td class="cell">
+                                    <div class="cell-content"></div>
+                                </td>
+                                <td class="cell">
+                                    <div class="cell-content"></div>
+                                </td>
+                                <td class="cell">
+                                    <div class="cell-content"></div>
+                                </td>
+                                <td class="cell">
+                                    <div class="cell-content"></div>
+                                </td>
+                                <td class="cell">
+                                    <div class="cell-content"></div>
+                                </td>
+                                <td class="cell">
+                                    <div class="cell-content"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cell">
+                                    <div class="cell-content"></div>
+                                </td>
+                                <td class="cell">
+                                    <div class="cell-content"></div>
+                                </td>
+                                <td class="cell">
+                                    <div class="cell-content"></div>
+                                </td>
+                                <td class="cell">
+                                    <div class="cell-content"></div>
+                                </td>
+                                <td class="cell">
+                                    <div class="cell-content"></div>
+                                </td>
+                                <td class="cell">
+                                    <div class="cell-content"></div>
+                                </td>
+                                <td class="cell">
+                                    <div class="cell-content"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cell">
+                                    <div class="cell-content"></div>
+                                </td>
+                                <td class="cell">
+                                    <div class="cell-content"></div>
+                                </td>
+                                <td class="cell">
+                                    <div class="cell-content"></div>
+                                </td>
+                                <td class="cell">
+                                    <div class="cell-content"></div>
+                                </td>
+                                <td class="cell">
+                                    <div class="cell-content"></div>
+                                </td>
+                                <td class="cell">
+                                    <div class="cell-content"></div>
+                                </td>
+                                <td class="cell">
+                                    <div class="cell-content"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cell">
+                                    <div class="cell-content"></div>
+                                </td>
+                                <td class="cell">
+                                    <div class="cell-content"></div>
+                                </td>
+                                <td class="cell">
+                                    <div class="cell-content"></div>
+                                </td>
+                                <td class="cell">
+                                    <div class="cell-content"></div>
+                                </td>
+                                <td class="cell">
+                                    <div class="cell-content"></div>
+                                </td>
+                                <td class="cell">
+                                    <div class="cell-content"></div>
+                                </td>
+                                <td class="cell">
+                                    <div class="cell-content"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cell">
+                                    <div class="cell-content"></div>
+                                </td>
+                                <td class="cell">
+                                    <div class="cell-content"></div>
+                                </td>
+                                <td class="cell">
+                                    <div class="cell-content"></div>
+                                </td>
+                                <td class="cell">
+                                    <div class="cell-content"></div>
+                                </td>
+                                <td class="cell">
+                                    <div class="cell-content"></div>
+                                </td>
+                                <td class="cell">
+                                    <div class="cell-content"></div>
+                                </td>
+                                <td class="cell">
+                                    <div class="cell-content"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cell">
+                                    <div class="cell-content"></div>
+                                </td>
+                                <td class="cell">
+                                    <div class="cell-content"></div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <div class="day-events-box" id="day-events-box">
+                        <span class="close" id="day-events-close">&times;</span>
+                        <ul  class="day-events-list" id="day-events-list">
+                             <!-- Day events will be dynamically added here -->
+                         </ul>
+                    </div>
+                </div>
+                <div class="event-wrapper">
+                    <div class="event-header">
+                        <h2>Your Events</h2>
+                        <span class="new-event-btn" id="new-event-btn">&#43;</span>
+                    </div>
+                    <div class="empty-list" id="empty-event">
+                        <img src="assets/event.png" alt="No events" width="70" height="70">
+                        <h2>No events Yet</h2>
+                        <p class="centered-muted">No events for this month found. Try to create new events.</p>
+                        <button class="event-btn" id="event-btn">Create Event</button>
+                    </div>
+                    <ul class="event-list" id="event-list">
+                        <!-- Events will be dynamically added here -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="event-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Create Event</h2>
+                    <span class="close" id="event-close">&times;</span>
+                </div>
+                <form id="event-form">
+                    <div class="form-group">
+                        <label for="event-title" class="sr-only">Event Title:</label>
+                        <input type="text" id="event-title" class="form-control" name="title" placeholder="Add Title"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="all-day" name="allDay">
+                        <label for="all-day" class="all-day-label">All Day</label>
+                    </div>
+                    <p class="muted">Start From</p>
+                    <div class="form-box">
+                        <div class="form-group">
+                            <label for="start-date-input" class="sr-only">Event Date:</label>
+                            <div class="date-control"></div>
+                            <input type="date" id="start-date-input" class="hide-element" name="startDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="event-time" class="sr-only">Event Time:</label>
+                            <input class="form-control event-time" id="event-time" name="startTime" placeholder="Enter / Select Time" />
+                        </div>
+                    </div>
+                    <p class="muted">End To</p>
+                    <div class="form-box">
+                        <div class="form-group">
+                            <label for="end-date-input" class="sr-only">Event Date:</label>
+                            <div class="date-control"></div>
+                            <input type="date" id="end-date-input" class="hide-element" name="endDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="event-time2" class="sr-only">Event Time:</label>
+                            <input class="form-control event-time" id="event-time2" name="endTime" placeholder="Enter / Select Time"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="recurrence" class="sr-only">Event Time:</label>
+                        <select class="form-control" id="recurrence" name="recurrence">
+                            <option value="none">No Recurrence</option>
+                            <option value="daily">Daily</option>
+                            <option value="weekly">Weekly</option>
+                            <option value="monthly">Monthly</option>
+                            <option value="yearly">Yearly</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="event-location" class="sr-only">Event Date:</label>
+                        <input type="text" id="event-location" class="form-control" placeholder="Location"
+                            name="location" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="event-description" class="sr-only">Event Description:</label>
+                        <textarea id="event-description" class="form-control description" rows="10" name="description"
+                            placeholder="Add Description"></textarea>
+                    </div>
+                    <div id="success-message">New event successfully added to the calendar</div>
+                    <button type="submit" class="event-submit">Create Event</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="modal" , id="view-event-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Event Info</h2>
+                    <span class="close" id="view-event-close">&times;</span>
+                </div>
+                <div class="view-event-content">
+                    <div class="group-box">
+                        <span class="muted">Title</span>
+                        <h2 id="view-event-title">Event Title</h2>
+                    </div>
+                    <div class="group-box">
+                        <span class="muted">Description</span>
+                        <h2 id="view-event-description">This is a event description.</h2>
+                    </div>
+                    <div class="two-group-boxes">
+                        <div class="group-box">
+                            <span class="muted">Start Date</span>
+                            <h2 id="view-event-start-date"></h2>
+                        </div>
+                        <div class="group-box">
+                            <span class="muted">End Date</span>
+                            <h2 id="view-event-end-date"></h2>
+                        </div>
+                    </div>
+                    <div class="two-group-boxes">
+                        <div class="group-box">
+                            <span class="muted">Start Date</span>
+                            <h2 id="view-event-start-time">January 1, 2025</h2>
+                        </div>
+                        <div class="group-box">
+                            <span class="muted">End Time</span>
+                            <h2 id="view-event-end-time">December 1, 2025</h2>
+                        </div>
+                    </div>
+                    <div class="group-box">
+                        <span class="muted">Recurrence</span>
+                        <h2 id="view-event-recurrence">Daily</h2>
+                    </div>
+                    <div class="group-box">
+                        <span class="muted">Location</span>
+                        <h2 id="view-event-location">Nawabshah, Pakistan</h2>
+                    </div>
+                    <!-- <div class="centered-content"> -->
+                    <button class="delete-btn" id="event-delete">Delete</button>
+                    <!-- </div> -->
+                </div>
+            </div>
+
+            <script type="module" src="js/main.js"></script>
+            <script type="module" src="js/calender.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Product Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="cart-message">
+            <span>Your item has been successfully added to the cart.</span>
+            <div id="cart-message-hide"><i class="fas fa-times"></i></div>
+        </div>
+        <header>
+            <ul class="main-menu">
+                <li id="shop-btn">Shop</li>
+                <li><img src="assets/shopping_cart.svg" alt="my cart" class="cart-icon" id="cart"></li>
+            </ul>
+        </header>
+        <main>
+            <section class="products-wapper" id="product-wrapper" role="region">
+                <div class="page-heading">
+                    <h1>Discover Your Next Favorite Product</h1>
+                    <div class="divider">
+                        <hr>
+                    </div>
+                    <p>Quality, style, and innovation—all in one place.</p>
+                </div>
+            </section>
+            <section role="region" class="cart-section" id="cart-section">
+                <div class="product-section user-cart">
+                    <div class="category-box">
+                        <h2>Your Cart</h2>
+                        <hr>
+                    </div>
+                    <div class="empty-cart-box" id="empty-cart">
+                        <div class="empty-cart">
+                            <img src="assets/cart.png" alt="">
+                            <h3>Your Cart is Empty</h3>
+                            <hr>
+                            <p>Looks like you haven’t added anything yet. Start shopping to fill it up!</p>
+                        </div>
+                    </div>
+                    <ul class="cart-box" id="cart-box">
+                        <li class="cart-item">
+                            <img src="assets/watch.png" alt="" class="cart-item-image">
+                            <h3 class="cart-product-name">Product Name Here</h3>
+                            <div class="flexbox price-box">
+                                <div class="cart-price-text">
+                                    <span class="text-muted">Price</span>
+                                    <span class="cart-price">100$</span>
+                                </div>
+                                <div class="cart-price-text">
+                                    <span class="text-muted">Total Price</span>
+                                    <span class="cart-price">200$</span>
+                                </div>
+                            </div>
+                            <input type="number" class="quantity" min="1">
+                            <div class="flexbox">
+                                <button class="btn primary-btn">Add To Cart</button>
+                                <button class="btn secondary-btn">Details</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2025 FakeStoreAPI. All rights reserved.</p>
+        </footer>
+
+        <!-- Product Modal -->
+        <div class="modal" id="product-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Product Info</h2>
+                    <div class="modal-hide-icon" id="modal-hide"><i class="fas fa-times"></i></div>
+                </div>
+                <div class="modal-body">
+                    <img src="" alt="" id="modal-image">
+                    <hr>
+                    <div class="modal-info">
+                        <h3 id="product-name"></h3>
+                        <p id="product-decription"></p>
+                        <div id="product-price"></div>
+                        <div class="flexbox">
+                            <div id="rating-box">
+                                <div class="rating-text">
+                                    <span>Ratings</span>
+                                    <span id="ratings-count"></span>
+                                </div>
+                                <div id="stars">
+
+                                </div>
+                            </div>
+                            <button class="btn primary-btn" id="modal-cart-btn">Add To Cart</button>
+                        </div>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/script.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+
+</html>

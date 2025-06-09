@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizon</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!--Google font imports-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="wrapper" id="wrapper">
+        <div class="question-wrapper" id="question-wrapper">
+            <div class="container" id="container">
+                <div class="box-header">
+                    <span><b id="Total">00/00</b></span>
+                    <span><b id="Timer">30</b></span>
+                </div>
+                <h3 id="question" class="question">What is the purpose of the website?</h3>
+                <div class="options">
+                    <h4 id="option1" class="option option1">Quiz</h4>
+                    <h4 id="option2" class="option option2">Travel</h4>
+                    <h4 id="option3" class="option option3">Study</h4>
+                    <h4 id="option4" class="option option4">Looks</h4>
+                </div>
+                <button id="question-btn" class="question-btn" type="button" disabled>Select Option</button>
+            </div>
+        </div>
+        <div class="result-wrapper" id="result-wrapper">
+            <div class="result_div" id="result">
+                <h2>Congratulation</h2>
+                <img src="./trophy.png" alt="">
+                <p>You have successfully completed the test!</p>
+                <p>Your score is</p>
+                <h2 id="Obtained">4/5</h2>
+                <button class="Trybtn" id="Trybtn">Try Again</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>

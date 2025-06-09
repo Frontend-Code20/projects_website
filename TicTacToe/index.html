@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="container">
+            <h1 class="title">Tic Tac Toe</h1>
+            <div class="btn-box" id="startBtn-box">
+                <button type="button" class="start-btn" id="start-btn">Start</button>
+            </div>
+            <div id="play-box">
+                <div class="user-box" id="user-box">
+                    <div class="player deactive-user" id="user">You</div>
+                    <div class="player active-user" id="robot">Robot</div>
+                </div>
+                <div class="game-grid" id="game-grid">
+                    <button class="grid-btn" data-played="false">
+                        <img src="" alt="" data-played="false">
+                    </button>
+                    <button class="grid-btn" data-played="false">
+                        <img src="" alt="">
+                    </button>
+                    <button class="grid-btn" data-played="false">
+                        <img src="" alt="">
+                    </button>
+                    <button class="grid-btn" data-played="false">
+                        <img src="" alt="">
+                    </button>
+                    <button class="grid-btn" data-played="false">
+                        <img src="" alt="">
+                    </button>
+                    <button class="grid-btn" data-played="false">
+                        <img src="" alt="">
+                    </button>
+                    <button class="grid-btn" data-played="false">
+                        <img src="" alt="">
+                    </button>
+                    <button class="grid-btn" data-played="false">
+                        <img src="" alt="">
+                    </button>
+                    <button class="grid-btn" data-played="false">
+                        <img src="" alt="">
+                    </button>
+                    <div class="horizotal-line firstX-line"></div>
+                    <div class="horizotal-line secondX-line"></div>
+                    <div class="vertical-line firstY-line"></div>
+                    <div class="vertical-line secondY-line"></div>
+                    <div class="wining-line" id="wining-line"></div>
+                </div>
+            </div>
+            <div class="result-box" id="result-box">
+                <h2 id="result-title">Congratulations, You Won!</h2>
+                <div class="winner-box" id="winner-box">
+                </div>
+                <button type="button" role="try again" class="restart" id="restart">Restart</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

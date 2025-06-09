@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <header>
+                <h1 class="brand-title">
+                    <span class="high-text">To-Do</span><span>List</span>
+                </h1>
+                <div class="tasks-view-btn" id="tasks-view-btn">All Task</div>
+            </header>
+            <main>
+                <section role="region" class="form-section" id="form-section">
+                    <form action="" id="task-form">
+                        <div class="form-group">
+                            <label for="task-title" class="sr-only">Task Title</label>
+                            <input type="text" max="30" id="task-title" name="taskTitle" class="form-control"
+                                placeholder="Task Title" required>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-control deadline">
+                                <label for="deadline">Deadline</label>
+                                <input type="date" id="deadline" class="deadline-date" name="deadline" required>
+                            </div>
+                        </div>
+                        <!-- Priority Level Select -->
+                        <div class="form-group">
+                            <label for="priority" class="sr-only">Priority Level:</label>
+                            <select id="priority" name="priority" class="select-control" required>
+                                <option value="Low">Low</option>
+                                <option value="Medium">Medium</option>
+                                <option value="High">High</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="status" class="sr-only">Status:</label>
+                            <select id="status" name="status" class="select-control" required>
+                                <option value="Not_started">Not Started</option>
+                                <option value="In_progress">In Progress</option>
+                                <option value="Completed">Completed</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="notes" class="sr-only">Notes/Details</label>
+                            <input type="text" max="200" name="notes" id="notes" class="form-control"
+                                placeholder="Notes/Details" required>
+                        </div>
+
+                        <!-- Category Select -->
+                        <div class="form-group">
+                            <label for="category" class="sr-only">Category:</label>
+                            <select id="category" name="category" class="select-control" required>
+                                <option value="Work">Work</option>
+                                <option value="Personal">Personal</option>
+                                <option value="Shopping">Shopping</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+                        <input type="submit" id="submit-btn" class="submit-btn" value="Create Task ">
+                    </form>
+                </section>
+                <section role="region" class="list-section" id="list-section">
+                    <nav>
+                        <ul class="list-menu">
+                            <li class="list-menu-item disabled" id="list-menu-delete">Delete</li>
+                            <li class="list-menu-item active" id="list-menu-reorder">Reorder</li>
+                            <li class="list-menu-item active" id="list-menu-info">Info</li>
+                            <li class="list-menu-item active" id="list-menu-select">Select</li>
+                        </ul>
+                    </nav>
+                    <div class="list-container">
+                        <div class="empty-list" id="empty-list">
+                            <img src="assets/document.png" alt="empty list" width="80" height="80">
+                            <h2>No Tasks to Display</h2>
+                            <p>Looks like you're all clear! Create a new task to get things rolling.</p>
+                        </div>
+                        <ul class="list-box" id="list-box">
+                        </ul>
+                        <div id="modal">
+                            <div class="modal-body">
+                                <div class="modal-header">
+                                    <h2 class="modal-title">Task Info</h2>
+                                    <img src="./assets/hide.png" alt="hide" aria-labelledby="Hide Info" width="20px" height="20px" id="hide-modal">
+                                </div>
+                                <div class="modal-content">
+                                    <div class="info-group">
+                                        <span class="small text-muted">Task Title</span>
+                                        <span class="large bold" id="task-info-title">Buy groceries</span>
+                                    </div>
+                                    <div class="info-group">
+                                        <span class="small text-muted">Notes/Details</span>
+                                        <span class="medium-text notes" id="task-info-notes">Buy groceries Buy groceries Buy groceriesBuy groceries Buy groceries</span>
+                                    </div>
+                                    <div class="info-group">
+                                        <span class="small text-muted">Status</span>
+                                        <span class="large bold" id="task-info-status">In Progress</span>
+                                    </div>
+                                    <div class="info-group">
+                                        <span class="small text-muted">Priority</span>
+                                        <span class="large bold" id="task-info-priority">High</span>
+                                    </div>
+                                    <div class="info-group">
+                                        <span class="small text-muted">Category</span>
+                                        <span class="large bold" id="task-info-category">Work</span>
+                                    </div>
+                                    <div class="info-group">
+                                        <span class="small text-muted">Deadline</span>
+                                        <span class="large bold" id="task-info-deadline">12/12/2025</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.6/Sortable.min.js" integrity="sha512-csIng5zcB+XpulRUa+ev1zKo7zRNGpEaVfNB9On1no9KYTEY/rLGAEEpvgdw6nim1WdTuihZY1eqZ31K7/fZjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

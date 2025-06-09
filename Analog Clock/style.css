@@ -1,0 +1,78 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #000016;
+}
+.container{
+    position: relative;
+}
+.clock{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 15px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    font-family: "Playwrite CU", cursive;
+}
+.clock span{
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i)));
+    inset: 20px;
+    text-align: center;
+}
+.clock span b{
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+    font-size: 16px;
+}
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #000;
+    border-radius: 50%;
+    z-index: 10;
+}
+.hand{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 6;
+}
+.hand i{
+    position: absolute;
+    width: 4px;
+    height: var(--h);
+    background-color: var(--clr);
+    border-radius: 8px;
+    z-index: 4;
+}
+.brand{
+    position: absolute;
+    top: 40px;
+    font-size: 16px;
+}
+.circle{
+    width: 120px;
+    height: 120px;
+    border: 2px dashed #000;
+    border-radius: 50%;
+}
+.Digital{
+    color: #000;
+    font-size: 30px;
+    font-family: "Playwrite CU", cursive;
+    color: #fff;
+}

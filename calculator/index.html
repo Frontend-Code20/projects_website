@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="icon" href="/favicon.png">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/keyboard.css">
+    <link rel="stylesheet" href="./css/calculator.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section class="wrapper">
+        <div class="calculator" id="calculator">
+            <div class="screen">
+                <input type="text" class="screen-input" placeholder="0" id="number-input" />
+                <div class="total-count" id="total-count"></div>
+            </div>
+            <div class="keyboard">
+                <button class="btn top-key" id="off-btn">OFF</button>
+                <button class="btn top-key" id="grand-total">GT</button>
+                <button class="btn top-key" id="on-btn">ON/CE</button>
+                <button class="btn top-key" id="clear">AC</button>
+                <button class="btn top-key" id="delete">DEL</button>
+                <button class="btn circle-button" id="mrc">MRC</button>
+                <button class="btn circle-button" id="m-minus">M-</button>
+                <button class="btn circle-button" id="m-add">M+</button>
+                <button class="btn circle-button" id="m-clear">MC</button>
+                <button class="btn circle-button" id="add-minus">+/-</button>
+                <button class="btn circle-button fs-16" id="seven" data-bs-value="7">7</button>
+                <button class="btn circle-button fs-16" id="eight" data-bs-value="8">8</button>
+                <button class="btn circle-button fs-16" id="nine" data-bs-value="9">9</button>
+                <button class="btn circle-button fs-16" id="module" data-bs-value="%">%</button>
+                <button class="btn circle-button fs-16" id="root" data-bs-value="√">√</button>
+                <button class="btn circle-button fs-16" id="four" data-bs-value="4">4</button>
+                <button class="btn circle-button fs-16" id="five" data-bs-value="5">5</button>
+                <button class="btn circle-button fs-16" id="six" data-bs-value="6">6</button>
+                <button class="btn circle-button fs-16" id="multiply" data-bs-value="x">x</button>
+                <button class="btn circle-button fs-16" id="divide" data-bs-value="÷">÷</button>
+                <button class="btn circle-button fs-16" id="one" data-bs-value="1">1</button>
+                <button class="btn circle-button fs-16" id="two" data-bs-value="2">2</button>
+                <button class="btn circle-button fs-16" id="three" data-bs-value="3">3</button>
+                <button class="btn plus-btn fs-16" id="plus" data-bs-value="+">+</button>
+                <button class="btn circle-button fs-16" id="minus" data-bs-value="-">-</button>
+                <button class="btn zero-btn fs-16" id="zero" data-bs-value="0">0</button>
+                <button class="btn circle-button fs-16" id="dot" data-bs-value=".">.</button>
+                <button class="btn circle-button fs-16" id="equal">=</button>
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="./js/index.js"></script>
+    <script src="./js/3d-effect.js"></script>
+</body>
+
+</html>

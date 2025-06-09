@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analog Clock</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google font imports -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="clock" id="clock">
+            <div class="hand" style="--clr:rgb(0, 195, 255); --h:72px" id="hour"><i></i></div>
+            <div class="hand" style="--clr:#0f0; --h:84px" id="min"><i></i></div>
+            <div class="hand" style="--clr:#00f; --h:96px" id="sec"><i></i></div>
+            <span style="--i:1;"><b>1</b></span>
+            <span style="--i:2;"><b>2</b></span>
+            <span style="--i:3;"><b>3</b></span>
+            <span style="--i:4;"><b>4</b></span>
+            <span style="--i:5;"><b>5</b></span>
+            <span style="--i:6;"><b>6</b></span>
+            <span style="--i:7;"><b>7</b></span>
+            <span style="--i:8;"><b>8</b></span>
+            <span style="--i:9;"><b>9</b></span>
+            <span style="--i:10;"><b>10</b></span>
+            <span style="--i:11;"><b>11</b></span>
+            <span style="--i:12;"><b>12</b></span>
+            <h2 class="brand">Brand</h2>
+            <div class="circle"></div>
+        </div>
+    </div>
+    <div class="Digital">
+        <span><b id="h">00:</b></span>
+        <span><b id="m">00:</b></span>
+        <span><b id="s">00</b></span>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

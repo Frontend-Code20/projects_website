@@ -1,0 +1,142 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Inter", sans-serif;
+}
+.wrapper{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 40%;
+    height: 560px;
+    background-color: rgb(198, 220, 237);
+    border-radius: 10px;
+    gap: 30px;
+    overflow: hidden;
+}
+.question-wrapper{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 70%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: .2s;
+}
+
+.box-header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.options{
+    width: 100%;
+}
+.wrapper .option{
+    width: 100%;
+    background-color: rgb(244, 245, 247);
+    padding: 10px 0px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.wrapper .question-wrapper .question-btn{
+    width: 100%;
+    outline: none;
+    padding: 10px 0px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #1D8348;
+    box-shadow: 0px 0px 2px #1D8348;
+    font-size: 16px;
+    color: #fff;
+}
+
+.wrapper .question-wrapper .question-btn:disabled{
+    background-color: #5fdb93;
+}
+
+.Trybtn{
+    width: 150px;
+    cursor: pointer;
+    height: 30px;
+    outline: none;
+    border: none;
+    background-color: #1D8348;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 16px;
+}
+#Obtained{
+    font-size: 36px;
+    margin: 20px;
+}
+p{
+    margin: 0px;
+}
+.wrapper .question-wrapper .container .question{
+    margin-top: 20px;
+    text-align: center;
+}
+.result-wrapper{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s;
+}
+.result_div{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.result_div img{
+    width: 250px;
+    margin-bottom: 20px;
+}
+.result_div h2{
+    font-size: 36px;
+}
+
+@media screen and (max-width: 956px) {
+    .wrapper{
+        width: 50%;
+    }
+    .container{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 556px) {
+    .wrapper{
+        width: 90%;
+    }
+    .container{
+        width: 80%;
+    }
+}
