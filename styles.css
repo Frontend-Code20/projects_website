@@ -97,17 +97,12 @@ footer > div{
     gap: 10px;
 }
 
-.website{
-    font-size: 24px;
-    color: aqua;
+.link-item{
+    color: #CBA6F7;
+    text-decoration: none;
+    font-size: 12px;
 }
 
-.linkedIn{
-    font-size: 24px;
-    color: #0077B5;
-}
-
-.facebook{
-    font-size: 24px;
-    color: #1877F2;
+.link-item:hover{
+    color: #faf6f9;
 }
