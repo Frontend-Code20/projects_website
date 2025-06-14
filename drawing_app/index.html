@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draw unique</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="main-content">
+            <header>
+                <button class="btn" type="button" id="menu-icon"><i class="fas fa-bars"></i></button>
+                <div class="header-content" id="menu">
+                    <div class="header-head">
+                        <div>
+                            <input type="text" value="Untitled" class="design-name" id="design-name">
+                            <div class="undo-redo-box">
+                                <button type="button" class="btn" id="redo" title="Redo"><i class="fas fa-redo"></i></button>
+                                <button type="button" class="btn" id="undo" title="Undo"><i class="fas fa-undo"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-body">
+                        <div class="draw-tools">
+                            <div class="tool-box">
+                                <span class="tool-title">Draw</span>
+                                <div class="tools-group">
+                                    <button type="button" class="btn tool-btn active" id="brush"><i
+                                            class="fas fa-brush"></i></button>
+                                    <button type="button" class="btn tool-btn" id="eraser"><i
+                                            class="fas fa-eraser"></i></button>
+                                </div>
+                            </div>
+                            <div class="tool-box">
+                                <span class="tool-title">Size</span>
+                                <input type="range" id="brush-size" min="0" max="25" value="5">
+                            </div>
+                            <div class="tool-box">
+                                <span class="tool-title">color</span>
+                                <input type="color" class="color-input" id="brush-color">
+                            </div>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" title="Save Image" id="save-image-btn">Save As Image</button>
+                            <button type="button" title="Create New Design" id="create-new-btn">Create New</button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="canvas-container" id="canvas-container">
+                <canvas id="canvas">
+                    
+                </canvas>
+                <div id="custom-cursor"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+</body>
+
+</html>
