@@ -1,0 +1,104 @@
+.float-menu{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    /* background-color: aqua; */
+}
+
+.float-menu > ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+    display: flex;
+    height: 0px;
+    overflow: hidden;
+    flex-direction: column;
+    margin-bottom: 10px;
+    transition: height 3s ease-in-out;
+}
+
+.float-menu > ul.show{
+    height: initial;
+}
+
+.float-menu > ul > li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.float-menu > ul > li > .link{
+    text-decoration: none;
+    color: white;
+    height: 40px;
+    width: 40px ; 
+    border-radius: 50%;
+    display: inline-block;
+    justify-content: end;
+}
+
+.float-menu > ul > li > .link.website{
+    background-color: #6C63FF;
+}
+.float-menu > ul > li > .link.linkedIn{
+    background-color: #0077B5;
+}
+.float-menu > ul > li > .link.projects{
+    background-color: #25D366;
+}
+
+.float-menu > ul > li > .link.website:hover {
+    background-color: #544dff;
+}
+.float-menu > ul > li > .link.linkedIn:hover{
+    background-color: #005983;
+}
+.float-menu > ul > li > .link.projects:hover{
+    background-color: #1aaa52;
+}
+
+.float-menu > ul > li > .link > img {
+    width: 24px;
+    height: 24px;
+    display: block;
+    margin: 8px auto; /* Center the icon vertically */
+}
+
+.float-menu > ul > li > span {
+    font-size: 14px;
+    font-weight: bold;
+    visibility: hidden;
+    flex-grow: 1; 
+}
+
+.float-menu > ul > li:nth-child(1) > span {
+    color: #6C63FF;
+}
+
+.float-menu > ul > li:nth-child(2) > span {
+    color: #0077B5;
+}
+
+.float-menu > ul > li:nth-child(3) > span {
+    color: #25D366;
+}
+
+.float-menu > ul > li:hover > span {
+    visibility: visible; 
+}
+
+
+
+.float-menu > .float-button {
+    width: 40px;
+    height: 40px;
+    float: right;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}

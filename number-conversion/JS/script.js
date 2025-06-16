@@ -76,9 +76,9 @@ numberInput.addEventListener('input', () => {
 menuIcon.addEventListener('click', () => {
     if (menuWrapper.style.left === '0px') {
         menuWrapper.style.left = `-${menuWidth}px`
-        menuIcon.src = '/images/open.png'
+        menuIcon.src = './images/open.png'
     } else {
-        menuIcon.src = '/images/close.png'
+        menuIcon.src = './images/close.png'
         menuWrapper.style.left = `0px`
     }
 })

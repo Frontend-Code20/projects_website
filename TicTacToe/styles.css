@@ -111,7 +111,7 @@ body {
     left: 66%;
 }
 
-button>img {
+.game-grid > button > img {
     width: 80px;
 }
 

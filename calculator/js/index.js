@@ -1,5 +1,6 @@
-import { calculateByOperator } from "./calculations.js";
+import { calculateByOperator, findRoot } from "./calculations.js";
 
+// Get all the buttons and input fields
 const equalButton = document.getElementById('equal');
 const inputField = document.getElementById('number-input');
 const totalCountBox = document.getElementById('total-count');
@@ -13,10 +14,12 @@ const mMinusBtn = document.getElementById('m-minus');
 const mAddBtn = document.getElementById('m-add');
 const mClearBtn = document.getElementById('m-clear')
 
+// Other buttons
 const deleteBtn = document.getElementById('delete');
 const addMinus = document.getElementById('add-minus');
 const grandTotalBtn = document.getElementById('grand-total');
 
+// Button inputs 
 const buttonInputs = {
     one: document.getElementById('one'),
     two: document.getElementById('two'),
@@ -37,23 +40,24 @@ const buttonInputs = {
     dot: document.getElementById('dot'),
 }
 
+// Define the operators
 const operators = ["+", "-", "x", "÷", "%"];
 
+// Initialize variables
 let firstNumber = null;
 let totalCount = 0;
 let operator = null;
 
-
+// Add event listeners to the buttons
 Object.values(buttonInputs).forEach(buttonInput => {
     const buttonValue = buttonInput.dataset.bsValue
     if (operators.includes(buttonValue)) {
         buttonInput.addEventListener('click', () => {
             if (!firstNumber) {
-                firstNumber = inputField.value
-                inputField.value = ""
+                firstNumber = findRoot(inputField.value);
                 operator = buttonValue;
-                totalCountBox.innerHTML = firstNumber + buttonValue
-                inputField.focus();
+                totalCountBox.innerHTML = inputField.value + buttonValue
+                inputField.value = ""
             } {
                 totalCount = calculateByOperator(firstNumber, inputField.value, operator)
             }
@@ -61,20 +65,22 @@ Object.values(buttonInputs).forEach(buttonInput => {
     } else {
         buttonInput.addEventListener('click', () => {
             inputField.value = inputField.value + buttonValue;
-            inputField.focus();
         });
     }
+    window.innerWidth > 768 ? inputField.focus() : inputField.blur();
 });
 
+// Clear button functionality
 clear.addEventListener('click', () => {
 
     inputField.value = "";
     totalCountBox.innerHTML = "";
     window.localStorage.clear();
-    inputField.focus();
+    window.innerWidth > 768 ? inputField.focus() : inputField.blur();
 
 });
 
+// Off and On button functionality
 offBtn.addEventListener('click', () => {
 
     inputField.value = ""
@@ -88,38 +94,41 @@ onBtn.addEventListener('click', () => {
 
     inputField.disabled = false;
     inputField.placeholder = "0";
-    inputField.focus();
-
+    window.innerWidth > 768 ? inputField.focus() : inputField.blur();
+    
 });
 
+// Equal button functionality
 equalButton.addEventListener('click', () => {
 
     if (firstNumber) {
 
         const previousGT = Number.parseFloat(window.localStorage.getItem('grandTotal')) || 0;
 
-        totalCount = calculateByOperator(firstNumber, inputField.value, operator);
+        totalCount = calculateByOperator(firstNumber, findRoot(inputField.value) , operator);
 
-        totalCountBox.innerHTML += inputField.value + " = " + totalCount;
-        inputField.value = totalCount;
+        totalCountBox.innerHTML += inputField.value + " = " + totalCount.toFixed(2);
+        inputField.value = totalCount.toFixed(5);
         
         window.localStorage.setItem('grandTotal', previousGT + Number.parseFloat(totalCount));
         firstNumber = null;
-        console.log(previousGT, totalCount);
         
     }
-    inputField.focus();
+    window.innerWidth > 768 ? inputField.focus() : inputField.blur();
 
 });
 
+// Memory buttons functionality
 mRCBtn.addEventListener('click', () => {
 
     const MRCValue = window.localStorage.getItem('MRCValue');
     inputField.value = MRCValue === null ? 0 : MRCValue;
-    inputField.focus();
+    window.innerWidth > 768 ? inputField.focus() : inputField.blur();
+
 
 });
 
+// Memory add, minus, and clear buttons functionality
 mAddBtn.addEventListener('click', () => {
 
     const value = inputField.value
@@ -133,10 +142,11 @@ mAddBtn.addEventListener('click', () => {
     } else {
     }
 
-    inputField.focus();
+    window.innerWidth > 768 ? inputField.focus() : inputField.blur();
 
 });
 
+// Memory minus button functionality
 mMinusBtn.addEventListener('click', () => {
 
     const value = inputField.value.trim();
@@ -144,15 +154,18 @@ mMinusBtn.addEventListener('click', () => {
     if (!isNaN(value)) {
         window.localStorage.setItem('MRCValue', previousValue - value);
     }
-    inputField.focus();
+    window.innerWidth > 768 ? inputField.focus() : inputField.blur();
 
 });
 
+// Memory clear button functionality
 mClearBtn.addEventListener('click', () => {
     window.localStorage.clear();
-    inputField.focus();
+    window.innerWidth > 768 ? inputField.focus() : inputField.blur();
+
 });
 
+// Delete button functionality
 deleteBtn.addEventListener('click', () => {
 
     const start = inputField.selectionStart;
@@ -165,10 +178,11 @@ deleteBtn.addEventListener('click', () => {
 
     inputField.selectionStart = inputField.selectionEnd = start - 1;
 
-    inputField.focus();
+    window.innerWidth > 768 ? inputField.focus() : inputField.blur();
 
 });
 
+// Add or remove minus sign functionality
 addMinus.addEventListener('click', () => {
     let value = inputField.value;
 
@@ -178,14 +192,15 @@ addMinus.addEventListener('click', () => {
         inputField.value = '-' + value;
     }
 
-    inputField.focus();
+    window.innerWidth > 768 ? inputField.focus() : inputField.blur();
+
 });
 
+// Grand total button functionality
 grandTotalBtn.addEventListener('click', () => {
 
     const grantTotal = window.localStorage.getItem('grandTotal');
     grantTotal ? inputField.value = grantTotal : inputField.value = 0;
     totalCountBox.innerHTML = ""
-    inputField.focus();
-
+    window.innerWidth > 768 ? inputField.focus() : inputField.blur();
 });

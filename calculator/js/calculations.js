@@ -1,5 +1,5 @@
+// This module exports a function to perform calculations based on the provided operator and operands.
 export function calculateByOperator(first, second, operator) {
-    console.log(first, second, operator);
     
     if(!operator || !second){
         return Number.parseFloat(first);
@@ -20,6 +20,19 @@ export function calculateByOperator(first, second, operator) {
         return operations[operator](first, second);
     } else {
         throw new Error("Invalid operator");
+    }
+}
+
+export function findRoot(value){
+    console.log(value);
+    if(value.includes("√")){
+        const parts = value.split("√");
+        console.log(parts);
+        if(parts.length === 2 && !isNaN(parts[1])){
+            return Math.sqrt(Number.parseFloat(parts[1]));
+        }
+    }else{
+        return value;
     }
 }
 

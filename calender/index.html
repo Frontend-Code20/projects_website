@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calender</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../floatButton.css">
 </head>
 
 <body>
@@ -178,9 +179,9 @@
                     </table>
                     <div class="day-events-box" id="day-events-box">
                         <span class="close" id="day-events-close">&times;</span>
-                        <ul  class="day-events-list" id="day-events-list">
-                             <!-- Day events will be dynamically added here -->
-                         </ul>
+                        <ul class="day-events-list" id="day-events-list">
+                            <!-- Day events will be dynamically added here -->
+                        </ul>
                     </div>
                 </div>
                 <div class="event-wrapper">
@@ -225,7 +226,8 @@
                         </div>
                         <div class="form-group">
                             <label for="event-time" class="sr-only">Event Time:</label>
-                            <input class="form-control event-time" id="event-time" name="startTime" placeholder="Enter / Select Time" />
+                            <input class="form-control event-time" id="event-time" name="startTime"
+                                placeholder="Enter / Select Time" />
                         </div>
                     </div>
                     <p class="muted">End To</p>
@@ -237,7 +239,8 @@
                         </div>
                         <div class="form-group">
                             <label for="event-time2" class="sr-only">Event Time:</label>
-                            <input class="form-control event-time" id="event-time2" name="endTime" placeholder="Enter / Select Time"/>
+                            <input class="form-control event-time" id="event-time2" name="endTime"
+                                placeholder="Enter / Select Time" />
                         </div>
                     </div>
                     <div class="form-group">
@@ -314,9 +317,29 @@
                     <!-- </div> -->
                 </div>
             </div>
+        </div>
+    </div>
+     <div class="float-menu">
+        <ul class="float-menu-list">
+            <li>
+                <span>Portfolio</span>
+                <a href="https://usama4.vercel.app" class="link website" target="_blank"><img src="../icons/website.svg" alt=""></a>
+            </li>
+            <li>
+                <span>LinkedIn</span>
+                <a href="https://www.linkedin.com/in/usama-khan2004" target="_blank" class="link linkedIn"><img src="../icons/linkedin.png" alt=""></a>
+            </li>
+            <li>
+                <span>Projects</span>
+                <a href="https://usama4.netlify.app" class="link projects"><img src="../icons/projects.svg" alt=""></a>
+            </li>
+        </ul>
+        <button class="float-button"><img src="../icons/add.svg" alt=""></button>
+    </div>
 
-            <script type="module" src="js/main.js"></script>
-            <script type="module" src="js/calender.js"></script>
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/calender.js"></script>
+    <script src="../floatButton.js"></script>
 </body>
 
 </html>

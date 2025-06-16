@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Draw unique</title>
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="../floatButton.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 
@@ -20,8 +21,10 @@
                         <div>
                             <input type="text" value="Untitled" class="design-name" id="design-name">
                             <div class="undo-redo-box">
-                                <button type="button" class="btn" id="redo" title="Redo"><i class="fas fa-redo"></i></button>
-                                <button type="button" class="btn" id="undo" title="Undo"><i class="fas fa-undo"></i></button>
+                                <button type="button" class="btn" id="redo" title="Redo"><i
+                                        class="fas fa-redo"></i></button>
+                                <button type="button" class="btn" id="undo" title="Undo"><i
+                                        class="fas fa-undo"></i></button>
                             </div>
                         </div>
                     </div>
@@ -54,14 +57,33 @@
             </header>
             <div class="canvas-container" id="canvas-container">
                 <canvas id="canvas">
-                    
+
                 </canvas>
                 <div id="custom-cursor"></div>
             </div>
         </div>
     </div>
-
+    <div class="float-menu">
+        <ul class="float-menu-list">
+            <li>
+                <span>Portfolio</span>
+                <a href="https://usama4.vercel.app" class="link website" target="_blank"><img src="../icons/website.svg"
+                        alt=""></a>
+            </li>
+            <li>
+                <span>LinkedIn</span>
+                <a href="https://www.linkedin.com/in/usama-khan2004" target="_blank" class="link linkedIn"><img
+                        src="../icons/linkedin.png" alt=""></a>
+            </li>
+            <li>
+                <span>Projects</span>
+                <a href="https://usama4.netlify.app" class="link projects"><img src="../icons/projects.svg" alt=""></a>
+            </li>
+        </ul>
+        <button class="float-button"><img src="../icons/add.svg" alt=""></button>
+    </div>
     <script type="module" src="./main.js"></script>
+    <script src="../floatButton.js"></script>
 </body>
 
 </html>
