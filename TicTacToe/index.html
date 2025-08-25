@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe Game</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="../floatButton.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap" rel="stylesheet">
@@ -17,13 +16,27 @@
     <div class="wrapper">
         <div class="container">
             <h1 class="title">Tic Tac Toe</h1>
-            <div class="btn-box" id="startBtn-box">
-                <button type="button" class="start-btn" id="start-btn">Start</button>
+            <div class="start-screen" id="startBtn-box">
+                <div class="selection-section">
+                    <p>Pick starter: Robot, User, Random.</p>
+                    <div class="player-selection-box">
+                        <button class="selectBtn selected" data-player="robot" title="Robot"><img src="./assets/robot.png" alt=""></button>
+                        <button class="selectBtn" data-player="user" title="User"><img src="./assets/user.png" alt=""></button>
+                        <button class="selectBtn" data-player="null" title="Random" ><img src="./assets/random.png" alt=""></button>
+                    </div>
+                </div>
+                <button type="button" class="start-btn" id="start-btn"><img src="./assets/play.svg" alt="Play"></button>
             </div>
             <div id="play-box">
                 <div class="user-box" id="user-box">
-                    <div class="player deactive-user" id="user">You</div>
-                    <div class="player active-user" id="robot">Robot</div>
+                    <div class="player deactive-user" id="user">
+                        <img src="./assets/user.png" alt="">
+                        <h2>You</h2>
+                    </div>
+                    <div class="player active-user" id="robot">
+                        <img src="./assets/robot.png" alt="">
+                        <h2>Robot</h2>
+                    </div>
                 </div>
                 <div class="game-grid" id="game-grid">
                     <button class="grid-btn" data-played="false">
@@ -53,40 +66,25 @@
                     <button class="grid-btn" data-played="false">
                         <img src="" alt="">
                     </button>
-                    <div class="horizotal-line firstX-line"></div>
-                    <div class="horizotal-line secondX-line"></div>
-                    <div class="vertical-line firstY-line"></div>
-                    <div class="vertical-line secondY-line"></div>
-                    <div class="wining-line" id="wining-line"></div>
+                    <div class="cross-left" id="cross-left"></div> 
+                    <div class="cross-right" id="cross-right"></div>
+                    <div class="vertical" id="vertical"></div>
+                    <div class="horizontal" id="horizontal"></div>
                 </div>
             </div>
             <div class="result-box" id="result-box">
-                <h2 id="result-title">Congratulations, You Won!</h2>
                 <div class="winner-box" id="winner-box">
                 </div>
-                <button type="button" role="try again" class="restart" id="restart">Restart</button>
+                <h2 id="result-title">Congratulations, You Won!</h2>
+                <div class="result-section-btn-box">
+                    <button type="button" role="play again" id="restart"><img src="./assets/restart.svg" alt="restart"> </button>
+                    <button type="button" role="home" id="home"> <img src="./assets/home.svg" alt="home"> </button>
+                </div>
             </div>
         </div>
     </div>
-     <div class="float-menu">
-        <ul class="float-menu-list">
-            <li>
-                <span>Portfolio</span>
-                <a href="https://usama4.vercel.app" class="link website" target="_blank"><img src="../icons/website.svg" alt=""></a>
-            </li>
-            <li>
-                <span>LinkedIn</span>
-                <a href="https://www.linkedin.com/in/usama-khan2004" target="_blank" class="link linkedIn"><img src="../icons/linkedin.png" alt=""></a>
-            </li>
-            <li>
-                <span>Projects</span>
-                <a href="https://usama4.netlify.app" class="link projects"><img src="../icons/projects.svg" alt=""></a>
-            </li>
-        </ul>
-        <button class="float-button"><img src="../icons/add.svg" alt=""></button>
-    </div>
-    <script src="script.js"></script>
-    <script src="../floatButton.js"></script>
+
+    <script type="module" src="./js/app.js"></script>
 </body>
 
 </html>
