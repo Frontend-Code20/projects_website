@@ -1,19 +1,45 @@
 body{
     margin: 0px;
     padding: 0px;
+    display: flex;
+    justify-content: center;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
+    background: linear-gradient(180deg, #141E30 60%, #243B55);
 }
 
 .wrapper{
     width: 100%;
     height: 100vh;
     display: flex;
+    max-width: 1200px;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(180deg, #141E30 60%, #243B55);
     color: #faf6f9;
     overflow: auto;
+}
+
+
+header{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 20px;
+    background-color: #CBA6F7;
+}
+
+header > img{
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid #243B55;
+}
+
+.page-title{
+    font-size: 1.5rem;
+    color: #243B55;
 }
 
 .intro-section > h1{
