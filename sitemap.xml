@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://usama4.netlify.app/</loc>
+  <lastmod>2025-08-26T06:13:24+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://usama4.netlify.app/to-do-list/</loc>
+  <lastmod>2025-08-26T06:13:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://usama4.netlify.app/calculator/</loc>
+  <lastmod>2025-08-26T06:13:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://usama4.netlify.app/weather/</loc>
+  <lastmod>2025-08-26T06:13:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://usama4.netlify.app/product_page/</loc>
+  <lastmod>2025-08-26T06:13:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://usama4.netlify.app/calender/</loc>
+  <lastmod>2025-08-26T06:13:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://usama4.netlify.app/letter_generator/</loc>
+  <lastmod>2025-08-26T06:13:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://usama4.netlify.app/number-conversion/</loc>
+  <lastmod>2025-08-26T06:13:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://usama4.netlify.app/quiz/</loc>
+  <lastmod>2025-08-26T06:13:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://usama4.netlify.app/tictactoe/</loc>
+  <lastmod>2025-08-26T06:13:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://usama4.netlify.app/drawing_app/</loc>
+  <lastmod>2025-08-26T06:13:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://usama4.netlify.app/analog%20clock/</loc>
+  <lastmod>2025-08-26T06:13:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>
