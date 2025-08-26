@@ -31,7 +31,11 @@ const winPattern = [
 const gameState = Array(9).fill(" ");
 
 // --- Helpers ---
-const toggleGrid = (disabled) => gridBtns.forEach(btn => btn.disabled = disabled);
+const toggleGrid = (disabled) => {
+    gridBtns.forEach((btn) => {
+        btn.dataset.played === "true" ? btn.disabled = true : btn.disabled = disabled;
+    });
+} 
 
 const resetGame = () => {
     gameState.fill(" ");
@@ -103,9 +107,9 @@ function userPlay(btn, index) {
     btn.dataset.played = "true";
     toggleGrid(true);
     activePlayer(robot, user);
-
+    
     const winIndex = checkForWinner("X");
-    winIndex !== undefined ? endGame(winIndex, "X") : delay(AIMove, 2000);
+    winIndex !== undefined ?  endGame(winIndex, "X") : delay(AIMove, 2000);
 }
 
 function AIMove(firstMove = false) {
@@ -131,11 +135,15 @@ function AIMove(firstMove = false) {
     }
 
     const winIndex = checkForWinner("O");
-    if (winIndex !== undefined) return endGame(winIndex, "O");
+    if (winIndex !== undefined){
+        toggleGrid(true);
+        return endGame(winIndex, "O");
+    }else{
+        toggleGrid(false);
+    } 
 
     if (gameState.every(c => c !== " ")) return delay(() => showResults("draw"), 2000);
 
-    toggleGrid(false);
     activePlayer(user, robot);
 }
 
